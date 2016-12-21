@@ -26,9 +26,7 @@ class Tabs extends Component {
   }
 
   renderContent() {
-    return(
-      <h2>{this.state.selected}</h2>
-    );
+
   }
 
   render() {
