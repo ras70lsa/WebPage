@@ -18,7 +18,7 @@ class TabElement extends Component {
   render() {
     var linkStyle = {color: 'black', textDecoration: 'none'};
     if (this.props.selected) {
-      linkStyle = {color: 'blue', textDecoration: 'none', fontSize: 20};
+      linkStyle = {color: 'black', textDecoration: 'none', fontSize: 20};
     } else if (this.state.hover){
       linkStyle = {color: 'black', textDecoration: 'none', fontSize: 20};
     }
