@@ -11,13 +11,6 @@ class App extends Component {
         <div style = {styles.container}/>
         <div style = {styles.con}>
           <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
-          <h1> RYAN</h1>
         </div>
         <div style = {styles.footer}>
         </div>
@@ -36,7 +29,7 @@ let styles = {
 
   con: {
     backgroundColor: 'gray',
-    paddingBottom: 200,
+    paddingBottom: 100,
     margin: 0
   },
 
@@ -44,7 +37,7 @@ let styles = {
     position: 'fixed',
     backgroundColor: 'black',
     bottom: 0,
-    height: 200,
+    height: 100,
     width: '100%'
   }
 }
