@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TabElement from './TabElement';
-import crest from './crest.png';
+import EducationPage from './EducationPage';
 
 class Tabs extends Component {
 
@@ -28,12 +28,7 @@ class Tabs extends Component {
 
   renderContent() {
       return (
-        <div>
-          <img style = {{height: 60}} src={crest}/>
-          <ul>
-            <li> Ryan </li>
-          </ul>
-        </div>
+        <EducationPage/>
       );
   }
 

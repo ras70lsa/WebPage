@@ -7,7 +7,7 @@ class BottomBar extends Component {
 
   render() {
     return (
-      <div style = {{position: 'fixed', bottom: 0, width: '100%', float: 'right', textAlign: 'right', height: 70, backgroundColor: 'white'}}>
+      <div style = {{width: '100%', float: 'right', textAlign: 'right', height: 70, backgroundColor: 'blue'}}>
           <ul style = {{display: 'block'}}>
             <li style= {{display: 'inline-block', paddingRight: 10}}>
               <a target="_blank" href="https://github.com/ras70lsa">
