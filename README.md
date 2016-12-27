@@ -1,3 +1,11 @@
+# ReadMe
+
+### Access
+
+When the server is running the webpage can be accessed [here](http://ryanstpierre.colab.duke.edu:8080)
+
+### Create React App Info
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
