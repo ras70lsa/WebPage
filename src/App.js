@@ -8,12 +8,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style = {styles.container}/>
-        <div style = {styles.con}>
-          <h1> RYAN</h1>
-        </div>
-        <div style = {styles.footer}>
-        </div>
+        <Header/>
+        <Tabs/>
+        <BottomBar/>
       </div>
     );
   }
@@ -28,18 +25,10 @@ let styles = {
   },
 
   con: {
+    display: 'flex',
     backgroundColor: 'gray',
-    paddingBottom: 100,
-    margin: 0
+    flex: 1,
   },
-
-  footer: {
-    position: 'fixed',
-    backgroundColor: 'black',
-    bottom: 0,
-    height: 100,
-    width: '100%'
-  }
 }
 
 

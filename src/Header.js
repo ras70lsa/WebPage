@@ -4,11 +4,24 @@ import logo from './chapel.jpg';
 class Header extends Component {
   render() {
     return (
-      <div style = {{backgroundColor: 'gray', height: 200, overflow: 'hidden'}}>
-        <img style = {{width: '100%'}} src={logo}/>
+      <div style = {styles.container}>
+        <img style = {styles.image} src={logo}/>
       </div>
     );
   }
+}
+
+let styles = {
+  container: {
+    backgroundColor: 'gray',
+    height: 200,
+    minWidth: '100%',
+    overflow: 'hidden'
+  },
+
+  image: {
+    width: '100%',
+  },
 }
 
 export default Header;

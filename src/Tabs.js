@@ -16,13 +16,13 @@ class Tabs extends Component {
 
   renderTabs() {
     return(
-      <ul style = {{display: 'block'}}>
+      <div style = {styles.tabsContainer}>
         <TabElement title = "Home" clickEvent = {this.click.bind(this, "Home")} selected = {this.state.selected === "Home"}/>
         <TabElement title = "Projects" clickEvent = {this.click.bind(this, "Projects")} selected = {this.state.selected === "Projects"}/>
         <TabElement title = "Education" clickEvent = {this.click.bind(this, "EDU")} selected = {this.state.selected === "EDU"}/>
         <TabElement title = "Work Experience" clickEvent = {this.click.bind(this, "Work")} selected = {this.state.selected === "Work"}/>
         <TabElement title = "CV" clickEvent = {this.click.bind(this, "CV")} selected = {this.state.selected === "CV"}/>
-      </ul>
+      </div>
     );
   }
 
@@ -44,7 +44,24 @@ class Tabs extends Component {
       </div>
     );
   }
-
 }
+
+let styles = {
+  tabsContainer: {
+    backgroundColor: '#9fbedf',
+    borderBottomWidth: 4,
+    borderBottomStyle: 'solid',
+    display: 'flex',
+    minHeight: 60,
+    margin: 0,
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%'
+  },
+}
+
+
 
 export default Tabs;

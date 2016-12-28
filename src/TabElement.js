@@ -16,20 +16,46 @@ class TabElement extends Component {
   }
 
   render() {
-    var linkStyle = {color: 'black', textDecoration: 'none'};
+    var linkStyle = styles.nonselected;
     if (this.props.selected) {
-      linkStyle = {color: 'black', textDecoration: 'none', fontSize: 20};
+      linkStyle = styles.selected;
     } else if (this.state.hover){
-      linkStyle = {color: 'black', textDecoration: 'none', fontSize: 20};
+      linkStyle = styles.hover;
     }
     return (
-      <li onClick = {this.props.clickEvent} onMouseEnter={() => this.hoverTrue()} onMouseLeave={() => this.hoverFalse()} style = {{display: 'inline-block', paddingRight: 40}}>
+      <div onClick = {this.props.clickEvent} onMouseEnter={() => this.hoverTrue()} onMouseLeave={() => this.hoverFalse()} style = {styles.listItem}>
         <a href="#" style = {linkStyle}>
           {this.props.title}
         </a>
-      </li>
+      </div>
     );
   }
+}
+
+let styles = {
+  listItem: {
+    listStyleType: 'none',
+    padding: 10
+  },
+
+  nonselected: {
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: 20
+  },
+
+  selected: {
+    color: 'black',
+    textDecoration: 'underline',
+    fontSize: 25
+  },
+
+  hover: {
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: 25
+  },
+
 }
 
 export default TabElement;
