@@ -53,9 +53,10 @@ class Tabs extends Component {
 
 let styles = {
   tabsContainer: {
-    backgroundColor: '#9fbedf',
-    borderBottomWidth: 4,
+    backgroundColor: '#001A57',
+    borderBottomWidth: 2,
     borderBottomStyle: 'solid',
+    borderBottomColor: 'gray',
     display: 'flex',
     minHeight: 60,
     margin: 0,

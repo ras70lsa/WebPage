@@ -39,19 +39,19 @@ let styles = {
   },
 
   nonselected: {
-    color: 'black',
+    color: '#eaedf2',
     textDecoration: 'none',
     fontSize: 20
   },
 
   selected: {
-    color: 'black',
+    color: '#eaedf2',
     textDecoration: 'underline',
     fontSize: 25
   },
 
   hover: {
-    color: 'black',
+    color: '#eaedf2',
     textDecoration: 'none',
     fontSize: 25
   },
