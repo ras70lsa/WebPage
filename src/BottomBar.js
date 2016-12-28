@@ -10,7 +10,12 @@ class BottomBar extends Component {
   render() {
     return (
       <div style = {styles.footer}>
-        <div>
+        <div style = {styles.center}>
+          <a href='#'>
+            <Up size= {20} style = {{color: 'black'}}>top</Up>
+          </a>
+        </div>
+        <div style = {styles.right}>
             <ul>
               <li style = {styles.listItem}>
                 <a target="_blank" href={links.github}>
@@ -28,11 +33,6 @@ class BottomBar extends Component {
                 </a>
               </li>
             </ul>
-        </div>
-        <div style = {styles.center}>
-          <a href='#'>
-            <Up size= {20} style = {{color: 'black'}}>top</Up>
-          </a>
         </div>
         <div style = {styles.left}>
           <a target="_blank" href={links.about} style = {styles.about}>
@@ -54,16 +54,26 @@ let styles = {
     height: 60,
     width: '100%',
     display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  right: {
+    position: 'fixed',
+    bottom: 0,
+    right: 0,
+    height: 60,
+    width: 300,
+    display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center'
   },
+
 
   center: {
     position: 'fixed',
     bottom: 0,
     height: 60,
-    width: '100%',
-    backgroundColor: 'clear',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
@@ -71,10 +81,11 @@ let styles = {
 
   left: {
     position: 'fixed',
-    bottom: 0,
-    height: 60,
-    width: '100%',
     backgroundColor: 'clear',
+    bottom: 0,
+    left: 0,
+    height: 60,
+    width: 200,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',

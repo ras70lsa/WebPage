@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TabElement from './TabElement';
 import EducationPage from './EducationPage';
+import CV from './CV';
+import Home from './Home';
 
 class Tabs extends Component {
 
@@ -27,9 +29,12 @@ class Tabs extends Component {
   }
 
   renderContent() {
-      return (
-        <EducationPage/>
-      );
+      if (this.state.selected === "CV") {
+        return <CV/>;
+      } else if (this.state.selected === "EDU") {
+        return <EducationPage/>;
+      }
+      return <Home/>;
   }
 
   render() {
