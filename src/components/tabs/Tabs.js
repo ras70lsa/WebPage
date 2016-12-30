@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TabElement from './TabElement';
-import CV from './CV';
-import Home from './components/Home';
+import CV from '../screens/CV';
+import Work from '../screens/Work';
+import Home from '../screens/Home';
+import Projects from '../screens/Projects';
 
 class Tabs extends Component {
 
@@ -27,10 +29,16 @@ class Tabs extends Component {
   }
 
   renderContent() {
-      if (this.state.selected === "CV") {
+      //TODO: Make switch
+      //TODO: Make keys integers and put in properties file
+      if (this.state.selected==="CV") {
         return <CV/>;
+      } else if (this.state.selected==="Projects") {
+        return <Projects/>;
+      } else if (this.state.selected==="Work") {
+        return <Work/>;
       }
-      return <Home/>;
+      return <Home clickEvent={this.click.bind(this, "Projects")}/>;
   }
 
   render() {

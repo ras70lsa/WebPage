@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Tabs from './Tabs';
-import BottomBar from './BottomBar';
-import Header from './Header'
+import Tabs from './components/tabs/Tabs';
+import BottomBar from './components/BottomBar';
+import Header from './components/Header'
 import './App.css';
 
 class App extends Component {

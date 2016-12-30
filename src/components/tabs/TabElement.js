@@ -19,7 +19,7 @@ class TabElement extends Component {
       linkStyle = styles.hover;
     }
     return (
-      <div onClick = {this.props.clickEvent} onMouseEnter={() => this.setHover(true)} onMouseLeave={() => this.setHover(false)} style = {styles.listItem}>
+      <div onClick={this.props.clickEvent} onMouseEnter={() => this.setHover(true)} onMouseLeave={() => this.setHover(false)} style = {styles.listItem}>
         <a href="#" style = {linkStyle}>
           {this.props.title}
         </a>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import profile from '../../resources/profileImage.jpg';
-import Crests from './Crests';
-import description from '../../resources/Description';
+import profile from '../../../resources/profileImage.jpg';
+import description from '../../../resources/Description';
+import ProjectsLink from '../ProjectsLink';
+import Education from '../Education';
 
 class Home extends Component {
 
@@ -15,16 +16,10 @@ class Home extends Component {
           <div style={styles.listContainer}>
             <h1>Ryan St.Pierre</h1>
             <p>{description.about}</p>
-            <h3>See my projects</h3>
+            <ProjectsLink clickEvent={this.props.clickEvent}/>
           </div>
         </div>
-        <div style={styles.education}>
-          <h3 style={styles.noPadding}>Duke University | Durham, NC</h3>
-          <p style={styles.noPadding}>BSE Electrical and Computer Engineering/CS</p>
-          <p style={styles.noPadding}>Minor: Mathematics</p>
-          <p style={styles.noPadding}>Relevant Courses: list of classes</p>
-          <Crests/>
-        </div>
+        <Education/>
       </div>
     );
   }
@@ -36,26 +31,11 @@ class Home extends Component {
 
 let styles = {
 
-  noPadding: {
-    margin: 0,
-    padding: 0,
-  },
-
   avatar: {
     width: 250,
     padding: 20,
     borderRadius: '50%',
-    marginLeft: 80
-  },
-
-  education: {
-    display: 'flex',
-    flex: 1,
-    paddingLeft: 20,
-    paddingTop: 20,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    marginLeft: 80,
   },
 
   container: {

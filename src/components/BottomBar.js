@@ -3,8 +3,8 @@ import Github from 'react-icons/lib/go/mark-github';
 import LinkedIn from 'react-icons/lib/io/social-linkedin';
 import Mail from 'react-icons/lib/fa/envelope';
 import Up from 'react-icons/lib/fa/chevron-up';
-import links from '../config/links';
-import Icon from './components/HighlightIcon'
+import links from '../../config/links';
+import Icon from './HighlightIcon'
 
 class BottomBar extends Component {
 
@@ -13,7 +13,7 @@ class BottomBar extends Component {
       <div style = {styles.footer}>
         <div style = {styles.center}>
           <a href='#'>
-            <Up size= {20} style = {{color: 'black'}}>top</Up>
+            <Up size= {20} style={styles.black}/>
           </a>
         </div>
         <div style = {styles.right}>

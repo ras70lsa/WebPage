@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import pdf from './RyanStPierreResume.pdf';
+import pdf from '../../../resources/RyanStPierreResume.pdf';
 import spdf from "simple-react-pdf";
 
 class CV extends Component {
