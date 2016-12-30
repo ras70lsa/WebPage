@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/lib/Button';
+import Tooltip from 'react-bootstrap/lib/Tooltip';
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
 class ProjectCard extends Component {
 
   render() {
+    var codeButton=this.codeButton();
+    if(!this.props.openSource) {
+      codeButton=this.disabledButton();
+    }
     return (
       <div style={styles.container}>
         <img src={this.props.image} style={styles.avatar}/>
@@ -14,13 +20,30 @@ class ProjectCard extends Component {
               <a target="_blank" href={this.props.link} style={styles.nounderline}>
                 <Button bsStyle="success" bsSize="large" block style={styles.button}>Images</Button>
               </a>
-              <a target="_blank" href={this.props.link} style={styles.nounderline}>
-                <Button bsStyle="primary" bsSize="large" block style={styles.button}>Code</Button>
-              </a>
+              {codeButton}
             </div>
           </div>
       </div>
     )
+  }
+
+  codeButton() {
+    return(
+      <a target="_blank" href={this.props.link} style={styles.nounderline}>
+        <Button bsStyle="primary" bsSize="large" block style={styles.button}>Code</Button>
+      </a>
+    );
+  }
+
+  disabledButton() {
+    const tooltip = (
+      <Tooltip id="tooltip">Code not open source</Tooltip>
+    );
+    return (
+      <OverlayTrigger placement="bottom" overlay={tooltip}>
+        <Button bsStyle="primary" bsSize="large" style={styles.opac} block>Code</Button>
+      </OverlayTrigger>
+    );
   }
 }
 
@@ -36,6 +59,12 @@ let styles={
     alignItems: 'center',
     borderStyle: 'solid',
     marginTop: 40
+  },
+
+  opac:{
+    opacity: .5,
+    borderRadius: 0,
+    cursor: 'not-allowed'
   },
 
   button:{

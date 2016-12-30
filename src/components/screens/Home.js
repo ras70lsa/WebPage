@@ -41,7 +41,7 @@ let styles = {
   container: {
     display: 'flex',
     flexDirection: 'row',
-    paddingBottom: 70,
+    paddingBottom: 60,
   },
 
   listContainer: {

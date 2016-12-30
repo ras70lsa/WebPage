@@ -7,9 +7,10 @@ class Projects extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <Card title={"Vooga"} image={arc}/>
-        <Card title={"Lens"}/>
-        <Card title={"Game"}/>
+        <Card title={"Storkd"} image={arc} openSource={false}/>
+        <Card title={"Lens"} openSource={true}/>
+        <Card title={"Game"} openSource={true}/>
+        <Card title={"Game"} openSource={true}/>
       </div>
     );
   }
