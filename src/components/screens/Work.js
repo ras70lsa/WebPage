@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Card from '../WorkCard';
 import iLogo from '../../../resources/iLogo.png';
+import arc from '../../../resources/ARC.png';
+import links from '../../../config/links';
 
 class Work extends Component {
 
   render() {
     return (
       <div style={styles.container}>
-        <Card title={"InterSystems"} image={iLogo}/>
-        <Card title={"Peer Tutor"} image={iLogo}/>
+        <Card title={"InterSystems"} image={iLogo} link={links.intersystems}/>
+        <Card title={"Peer Tutor"} image={arc} link={links.dukeARC}/>
       </div>
     );
   }

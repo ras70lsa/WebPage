@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'react-bootstrap/lib/Button';
 
 class WorkCard extends Component {
 
@@ -9,7 +10,9 @@ class WorkCard extends Component {
           <div style={styles.textContainer}>
             <h2 style={styles.title}>{this.props.title}</h2>
             <p>Description about the company.  Here I can ramble on about what I did</p>
-            <button style={styles.button}>More</button>
+            <a target="_blank" href={this.props.link}>
+              <Button bsStyle="primary" style={styles.button}>More</Button>
+            </a>
           </div>
       </div>
     )
@@ -20,11 +23,12 @@ let styles={
   container:{
     width: 500,
     height: 200,
-    padding: 20,
     backgroundColor:'#eaedf2',
     display:'flex',
     justifyContent: 'space-around',
     borderStyle: 'solid',
+    marginTop: 20,
+    padding: 20
   },
 
   button:{

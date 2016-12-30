@@ -41,7 +41,8 @@ let styles={
     display:'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    textDecoration: 'none'
   },
 
   black:{
