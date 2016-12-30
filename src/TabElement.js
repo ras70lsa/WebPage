@@ -7,12 +7,8 @@ class TabElement extends Component {
     this.state = {hover: false};
   }
 
-  hoverTrue() {
-    this.setState({hover: true});
-  }
-
-  hoverFalse() {
-    this.setState({hover: false});
+  setHover(status) {
+    this.setState({hover: status});
   }
 
   render() {
@@ -23,7 +19,7 @@ class TabElement extends Component {
       linkStyle = styles.hover;
     }
     return (
-      <div onClick = {this.props.clickEvent} onMouseEnter={() => this.hoverTrue()} onMouseLeave={() => this.hoverFalse()} style = {styles.listItem}>
+      <div onClick = {this.props.clickEvent} onMouseEnter={() => this.setHover(true)} onMouseLeave={() => this.setHover(false)} style = {styles.listItem}>
         <a href="#" style = {linkStyle}>
           {this.props.title}
         </a>

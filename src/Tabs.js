@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import TabElement from './TabElement';
-import EducationPage from './EducationPage';
 import CV from './CV';
-import Home from './Home';
+import Home from './components/Home';
 
 class Tabs extends Component {
 
@@ -21,7 +20,6 @@ class Tabs extends Component {
       <div style = {styles.tabsContainer}>
         <TabElement title = "Home" clickEvent = {this.click.bind(this, "Home")} selected = {this.state.selected === "Home"}/>
         <TabElement title = "Projects" clickEvent = {this.click.bind(this, "Projects")} selected = {this.state.selected === "Projects"}/>
-        <TabElement title = "Education" clickEvent = {this.click.bind(this, "EDU")} selected = {this.state.selected === "EDU"}/>
         <TabElement title = "Work Experience" clickEvent = {this.click.bind(this, "Work")} selected = {this.state.selected === "Work"}/>
         <TabElement title = "CV" clickEvent = {this.click.bind(this, "CV")} selected = {this.state.selected === "CV"}/>
       </div>
@@ -31,8 +29,6 @@ class Tabs extends Component {
   renderContent() {
       if (this.state.selected === "CV") {
         return <CV/>;
-      } else if (this.state.selected === "EDU") {
-        return <EducationPage/>;
       }
       return <Home/>;
   }

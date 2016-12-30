@@ -3,7 +3,8 @@ import Github from 'react-icons/lib/go/mark-github';
 import LinkedIn from 'react-icons/lib/io/social-linkedin';
 import Mail from 'react-icons/lib/fa/envelope';
 import Up from 'react-icons/lib/fa/chevron-up';
-import links from '../config/links'
+import links from '../config/links';
+import Icon from './components/HighlightIcon'
 
 class BottomBar extends Component {
 
@@ -17,34 +18,53 @@ class BottomBar extends Component {
         </div>
         <div style = {styles.right}>
             <ul>
-              <li style = {styles.listItem}>
-                <a target="_blank" href={links.github}>
-                  <Github size={45} style = {{color: 'black'}}/>
-                </a>
-              </li>
-              <li style= {{display: 'inline-block', paddingRight: 10}}>
-                <a target="_blank" href={links.linkedin}>
-                  <LinkedIn size={48} style = {{color: '#0077B5'}}/>
-                </a>
-              </li>
-              <li style= {{display: 'inline-block', paddingRight: 10}}>
-                <a href={"mailto:" + links.gmail}>
-                  <Mail size= {45} style = {{color: 'black'}}/>
-                </a>
-              </li>
+              <Icon link={links.github} component={this.github(styles.black)} hover={this.github(styles.orange)}/>
+              <Icon link={links.linkedin} component={this.linkedIn(styles.blue)} hover={this.linkedIn(styles.purple)}/>
+              <Icon link={"mailto:" + links.gmail} component={this.mail(styles.black)} hover={this.mail(styles.red)}/>
             </ul>
         </div>
         <div style = {styles.left}>
-          <a target="_blank" href={links.about} style = {styles.about}>
-            About this page
-          </a>
+          <Icon link={links.about} component={this.about(styles.about)} hover={this.about(styles.aboutHover)}/>
         </div>
       </div>
     );
   }
+
+  about(style) {
+    return <p style = {style}>About this page</p>;
+  }
+
+  mail(style) {
+      return <Mail size= {45} style = {style}/>;
+  }
+
+  linkedIn(style) {
+      return <LinkedIn size={48} style = {style}/>;
+  }
+
+  github(style) {
+    return (<Github size={45} style = {style}/>);
+  }
 }
 
 let styles = {
+
+  blue:{
+    color: '#0077B5'
+  },
+
+  purple: {
+    color: '#8d6cab'
+  },
+
+  black: {
+    color: 'black'
+  },
+
+  red:{
+    color: '#dd5143'
+  },
+
   footer: {
     position: 'fixed',
     backgroundColor: '#eaedf2',
@@ -69,6 +89,9 @@ let styles = {
     alignItems: 'center'
   },
 
+  orange: {
+    color: '#ff9933'
+  },
 
   center: {
     position: 'fixed',
@@ -95,6 +118,11 @@ let styles = {
     paddingLeft: 20,
     color: 'black',
     textDecoration: 'none',
+  },
+
+  aboutHover: {
+    paddingLeft: 20,
+    color: '#8d6cab',
   },
 
   listItem: {
