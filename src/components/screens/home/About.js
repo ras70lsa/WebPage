@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import profile from '../../../../resources/profileImage.jpg';
+import profile from '../../../../resources/images/profileImage.jpg';
 import description from '../../../../resources/Description';
 import ProjectsLink from '../../ProjectsLink';
 

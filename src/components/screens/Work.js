@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../WorkCard';
-import iLogo from '../../../resources/iLogo.png';
-import arc from '../../../resources/ARC.png';
+import iLogo from '../../../resources/images/iLogo.png';
+import arc from '../../../resources/images/ARC.png';
 import links from '../../../config/links';
 
 class Work extends Component {

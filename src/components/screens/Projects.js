@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../ProjectCard'
-import arc from '../../../resources/ARC.png';
+import arc from '../../../resources/images/ARC.png';
 
 class Projects extends Component {
 

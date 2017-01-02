@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import crest from '../../resources/crest.png';
-import lsaCrest from '../../resources/lasalle.jpg';
+import crest from '../../resources/images/crest.png';
+import lsaCrest from '../../resources/images/lasalle.jpg';
 import Icon from './HighlightIcon';
 import links from '../../config/links';
 

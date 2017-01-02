@@ -46,7 +46,7 @@ let styles={
     width: '100%',
     margin: 0,
     padding: 0,
-    paddingTop: 10
+    paddingBottom: 10
   },
 
   text: {

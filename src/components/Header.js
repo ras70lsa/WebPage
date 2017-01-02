@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../resources/chapel.jpg';
+import logo from '../../resources/images/chapel.jpg';
 
 class Header extends Component {
   render() {
