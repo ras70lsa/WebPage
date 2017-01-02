@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TabElement from './TabElement';
 import CV from '../screens/CV';
 import Work from '../screens/Work';
-import Home from '../screens/Home';
+import Home from '../screens/home/Home';
 import Projects from '../screens/Projects';
 
 class Tabs extends Component {
@@ -60,7 +60,7 @@ let styles = {
     backgroundColor: '#001A57',
     borderBottomWidth: 2,
     borderBottomStyle: 'solid',
-    borderBottomColor: 'gray',
+    borderBottomColor: 'black',
     display: 'flex',
     minHeight: 60,
     margin: 0,

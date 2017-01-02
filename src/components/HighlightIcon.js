@@ -9,11 +9,15 @@ class HighlightIcon extends Component {
 
   render() {
     var comp = this.props.component;
+    var liStyle=styles.listItem;
     if(this.state.hover){
       comp = this.props.hover;
     }
+    if (this.props.listItemStyle!=null) {
+      liStyle=this.props.listItemStyle;
+    }
     return (
-      <li style = {styles.listItem}>
+      <li style = {liStyle}>
         <a  onMouseLeave={() => this.setHover(false)}
             onMouseEnter={() => this.setHover(true)}
             style = {styles.a}
@@ -32,7 +36,8 @@ class HighlightIcon extends Component {
 let styles = {
   listItem: {
     display: 'inline-block',
-    paddingRight: 10
+    padding: 0,
+    margin: 0,
   },
 
   a: {

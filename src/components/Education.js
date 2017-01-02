@@ -10,7 +10,6 @@ class Education extends Component {
           <h3 style={styles.noPadding}>Duke University | Durham, NC</h3>
           <p style={styles.smallPadding}>BSE Electrical and Computer Engineering/CS</p>
           <p style={styles.smallPadding}>Minor: Economics</p>
-          <p style={styles.small}>{"Relevant Courses: " + description.courses}</p>
           <Crests/>
         </div>
     );
@@ -21,11 +20,16 @@ let styles={
   education: {
     display: 'flex',
     flex: 1,
+    marginLeft: 40,
     paddingLeft: 20,
     paddingTop: 20,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    marginRight: 10,
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: 'white'
   },
 
   noPadding: {

@@ -18,13 +18,13 @@ class BottomBar extends Component {
         </div>
         <div style = {styles.right}>
             <ul>
-              <Icon link={links.github} component={this.github(styles.black)} hover={this.github(styles.orange)}/>
-              <Icon link={links.linkedin} component={this.linkedIn(styles.blue)} hover={this.linkedIn(styles.purple)}/>
-              <Icon link={"mailto:" + links.gmail} component={this.mail(styles.black)} hover={this.mail(styles.red)}/>
+              <Icon listItemStyle={styles.li} link={links.github} component={this.github(styles.black)} hover={this.github(styles.orange)}/>
+              <Icon listItemStyle={styles.li} link={links.linkedin} component={this.linkedIn(styles.blue)} hover={this.linkedIn(styles.purple)}/>
+              <Icon listItemStyle={styles.li} link={"mailto:" + links.gmail} component={this.mail(styles.black)} hover={this.mail(styles.red)}/>
             </ul>
         </div>
         <div style = {styles.left}>
-          <Icon link={links.about} component={this.about(styles.about)} hover={this.about(styles.aboutHover)}/>
+          <Icon listItemStyle={styles.li} link={links.about} component={this.about(styles.about)} hover={this.about(styles.aboutHover)}/>
         </div>
       </div>
     );
@@ -58,7 +58,7 @@ let styles = {
   },
 
   black: {
-    color: 'black'
+    color: 'black',
   },
 
   red:{
@@ -67,7 +67,7 @@ let styles = {
 
   footer: {
     position: 'fixed',
-    backgroundColor: '#eaedf2',
+    backgroundColor: 'white',
     borderTopWidth: 'black',
     borderTopStyle: 'solid',
     bottom: 0,
@@ -80,13 +80,14 @@ let styles = {
 
   right: {
     position: 'fixed',
+    backgroundColor: 'clear',
     bottom: 0,
     right: 0,
     height: 60,
-    width: 300,
+    width: 220,
     display: 'flex',
     justifyContent: 'flex-end',
-    alignItems: 'center'
+    alignItems: 'flex-center'
   },
 
   orange: {
@@ -108,27 +109,32 @@ let styles = {
     bottom: 0,
     left: 0,
     height: 60,
-    width: 200,
+    width: 120,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    marginLeft: 20,
   },
 
   about: {
-    paddingLeft: 20,
+    margin: 0,
+    padding: 0,
     color: 'black',
     textDecoration: 'none',
   },
 
   aboutHover: {
-    paddingLeft: 20,
+    margin: 0,
+    padding: 0,
     color: '#8d6cab',
   },
 
-  listItem: {
+  li: {
     display: 'inline-block',
-    paddingRight: 10
-  },
+    margin: 0,
+    paddingRight: 10,
+    paddingTop: 5
+  }
 }
 
 export default BottomBar;
