@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import profile from '../../../../resources/images/profileImage.jpg';
 import description from '../../../../resources/Description';
-import ProjectsLink from '../../ProjectsLink';
+import Link from '../../Link';
 
 class About extends Component {
 
@@ -15,7 +15,7 @@ class About extends Component {
           <div style={styles.listContainer}>
             <h1>Ryan St.Pierre</h1>
             <p style={styles.p}>{description.about}</p>
-            <ProjectsLink clickEvent={this.props.clickEvent}/>
+            <Link clickEvent={this.props.clickEvent} message={"Explore my projects"}/>
           </div>
         </div>
       </div>
@@ -40,14 +40,13 @@ let styles = {
   },
 
   left: {
-    flex: 1,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginLeft: 40,
+    marginLeft: 20,
     backgroundColor: 'white',
     marginTop: 10,
-    marginRight: 10,
+    marginRight: 15,
     paddingRight: 20,
     borderRadius: 10,
   },

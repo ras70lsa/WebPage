@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Education from '../../Education';
 import About from './About';
-import Skills from './Skills'
+import Skills from './Skills';
+import Activity from './Activity';
+import Education from './Education';
+import Frameworks from './Frameworks'
 
 class Home extends Component {
 
@@ -9,10 +11,14 @@ class Home extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.column}>
-          <About/>
+          <About clickEvent={this.props.clickEvent}/>
           <Education/>
+          <Frameworks/>
         </div>
-        <Skills/>
+        <div style={styles.column}>
+          <Skills/>
+          <Activity/>
+        </div>
       </div>
     );
   }
