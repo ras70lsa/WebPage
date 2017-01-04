@@ -7,5 +7,6 @@ module.exports = {
     'lsa': 'http://www.lasalle-academy.org/page',
     'intersystems': 'http://www.intersystems.com/',
     'dukeARC': 'https://arc.duke.edu/peer_tutoring/index.php',
-    'clubSoccer': 'https://recreation.duke.edu/recreation/sport-clubs/'
+    'clubSoccer': 'https://recreation.duke.edu/recreation/sport-clubs/',
+    'vooga': 'https://github.com/ras70lsa/vooga_salad'
 };

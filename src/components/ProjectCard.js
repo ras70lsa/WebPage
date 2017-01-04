@@ -10,21 +10,29 @@ class ProjectCard extends Component {
     if(!this.props.openSource) {
       codeButton=this.disabledButton();
     }
+    var borderColor=this.borderColor(this.props.color);
+
     return (
-      <div style={styles.container}>
-        <img src={this.props.image} style={styles.avatar}/>
-          <div style={styles.textContainer}>
-            <h2 style={styles.title}>{this.props.title}</h2>
-            <p>Description about the company.  Here I can ramble on about what I did</p>
-            <div style={styles.buttonContainer}>
+      <div style={Object.assign(styles.container, borderColor)}>
+        <div style={styles.imageContainer}>
+          <img src={this.props.image} style={styles.avatar}/>
+        </div>
+        <div style={styles.textContainer}>
+          <h2 style={styles.title}>{this.props.title}</h2>
+          <p>Description about the company.  Here I can ramble on about what I did</p>
+          <div style={styles.buttonContainer}>
               <a target="_blank" href={this.props.link} style={styles.nounderline}>
                 <Button bsStyle="success" bsSize="large" block style={styles.button}>Images</Button>
               </a>
               {codeButton}
-            </div>
           </div>
+        </div>
       </div>
     )
+  }
+
+  borderColor(color) {
+    return {borderColor: color};
   }
 
   codeButton() {
@@ -49,16 +57,22 @@ class ProjectCard extends Component {
 
 let styles={
   container:{
-    width: 300,
-    height: 400,
-    padding: 20,
-    backgroundColor:'#eaedf2',
+    width: 310,
+    padding: 0,
+    backgroundColor:'white',
     display:'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    borderStyle: 'solid',
-    marginTop: 40
+    marginTop: 40,
+  },
+
+  imageContainer: {
+    backgroundColor: 'white',
+    borderBottomStyle: 'solid',
+    width: '100%',
+    textAlign: 'center',
+    paddingBottom: 6
   },
 
   opac:{
@@ -78,33 +92,35 @@ let styles={
   buttonContainer:{
     position: 'absolute',
     display:'flex',
-    flex: 1,
     bottom: 0,
     left: 0,
     flexDirection: 'column',
-    padding: 0,
     margin: 0,
     width: '100%'
   },
 
   title:{
     padding:0,
-    margin:0
+    margin:0,
+    paddingTop: 10
   },
 
   textContainer:{
-    padding: 0,
+    padding: 5,
     display:'flex',
-    flex: 1,
+    paddingBottom: 120,
     justifyContent: 'flex-start',
     alignItems:'center',
     flexDirection: 'column',
     position: 'relative',
+    margin: 0,
+    flex: 1,
   },
 
   avatar: {
-    height: 50,
-    borderRadius: '50%',
+    height: 150,
+    maxWidth: '100%',
+    padding: 2,
   },
 }
 export default ProjectCard;
